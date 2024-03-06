@@ -1,1 +1,1 @@
-Same but with grid and responsive
+Helium project but with grid and responsive
