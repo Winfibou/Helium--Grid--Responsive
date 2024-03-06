@@ -1,1 +1,1 @@
-Helium project but with grid and responsive
+Helium project with grid and responsive
