@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+
+/* on commence par les réglages généraux */
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 0.9em;
+  /* 90% de la taille norm */
+}
+
+/* puis on part dans l'ordre des balises sur la console */
+
+body {
+  /* tout ce qui est ds le body,ses enfants l'auront aussi sauf speci. */
+  min-height: 100vh;
+  /* 100% de la taille de l'utilisateur (view-port height */
+  background: rgb(39, 37, 37);
+  color: rgb(241, 239, 237);
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* on réparti les 2 enfants équitablement */
+  padding: 10px 20px;
+}
+
+nav ul {
+  /* on ne touche que l'ul qui est dans nav */
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  margin: 30px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.header-left-container h3 {
+  color: #4747fe;
+  font-size: 1.8rem;
+}
+
+.header-right {
+  width: 50%;
+}
+#modem {
+  width: 100%;
+  /* (=100% dela taille du parent si on ne rajoute rien) */
+  /* en grid il faut retravailler les img */
+  margin: 0 auto;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  background-color: rgb(17, 2, 2);
+  border-radius: 10px;
+}
+
+.btn-container{
+  display: block;
+  /* (on rajoute ce flex pour qu ils se repartissent équitablement puis en remanie avec fd et jc) */
+  /* flex-direction: column;
+  justify-content:space-around;
+  align-items: center;   */
+  
+}
+
+button {
+  border: none;
+  background: #4747fe;
+  color: rgb(241, 239, 237);
+  width: 150px;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 5px;
+  display: block;
+}
+
+.infos-right {
+  /* display: flex;
+  align-items: center; */
+  
+}
+
+.infos-left{
+display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+     
+
+  
+
+
+.img-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.img-container img {
+  height: 60px;
+  /* ici on ne pointe que l img et on modifie la taille car sinon trop grand */
+}
+
+/* ************ MEDIA QUERIES ************** */
+
+@media screen and (max-width: 900px) {
+  /* maquette tablette est entre 700 et 900 . Ici, dès qu'on et en dessous de 900, ces règles s'appliquent*/
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-left-container h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 788px) {
+    /* maquette mmobile */
+    nav {
+        grid-template-columns: 35% 65%;
+    }
+    /* permet à la nav de prendre plus de place */
+    nav ul {
+        font-size: 0.9rem;
+        /* 70% de votre taille normale */
+    }
+    
+    .header {
+        display: block;
+        /* permet de mettre les éléments en desssous des uns et des autres ici pour le mode mobile*/
+    }
+
+    .info {
+        display: block;
+        text-align: center;
+    }
+
+    button{
+      margin:5px auto;
+    }
+    .img-container img {
+      height: 35px;
+    }
+
+    .btn-container{
+      text-align: center;
+    }
+    
+    
+
+    .infos-right{
+      width: 100%
+      /* pour qu'il prenne 100% de sa place car sinon à gauche */
+    }
+       
+
+
+}
+
+    
+
